@@ -9,10 +9,22 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- BEGIN PLUGIN CSS -->
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <!-- END PLUGIN CSS -->
+
+    <!-- BEGIN CORE CSS FRAMEWsORK -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- END CORE CSS FRAMEWORK -->
+
+    <!-- BEGIN CSS TEMPLATE -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-icons.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- END CSS TEMPLATE -->
 </head>
 <body>
 
@@ -20,16 +32,94 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ui-view></div>
+  <!-- BEGIN HEADER -->
+  <div class="header navbar navbar-inverse ">
+      <!-- BEGIN TOP NAVIGATION BAR -->
+      <div class="navbar-inner">
+          <div class="header-seperation">
+              <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">
+                  <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>
+              </ul>
+              <!-- BEGIN LOGO -->
+              <a href="index.html"><img src="img/logo.png" class="logo" alt=""  data-src="assets/img/logo.png" data-src-retina="assets/img/logo2x.png" width="106" height="21"/></a>
+              <!-- END LOGO -->
+          </div>
+          <!-- END RESPONSIVE MENU TOGGLER -->
+          <div class="header-quick-nav" >
+              <!-- BEGIN TOP NAVIGATION MENU -->
+              <div class="pull-left">
+                  <ul class="nav quick-section">
+                      <li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle" >
+                          <div class="iconset top-menu-toggle-dark"></div>
+                      </a> </li>
+                  </ul>
+                  <ul class="nav quick-section">
+                      <li class="quicklinks"> <a href="#" class="" >
+                          <div class="iconset top-reload"></div>
+                      </a> </li>
+                      <li class="quicklinks"> <span class="h-seperate"></span></li>
+                      <li class="quicklinks"> <a href="#" class="" >
+                          <div class="iconset top-tiles"></div>
+                      </a> </li>
+                      <li class="m-r-10 input-prepend inside search-form no-boarder">
+                          <span class="add-on"> <span class="iconset top-search"></span></span>
+                          <input name="" type="text"  class="no-boarder " placeholder="Search Dashboard" style="width:250px;">
+                      </li>
+                  </ul>
+              </div>
+              <!-- END TOP NAVIGATION MENU -->
 
+          </div>
+          <!-- END TOP NAVIGATION MENU -->
 
+      </div>
+      <!-- END TOP NAVIGATION BAR -->
+  </div>
+
+  <!-- END HEADER -->
+  <!-- BEGIN CONTAINER -->
+  <div class="page-container row">
+      <!-- BEGIN SIDEBAR -->
+      <div class="page-sidebar" id="main-menu">
+          <!-- BEGIN MINI-PROFILE -->
+          <div class="user-info-wrapper">
+              <div class="profile-wrapper">
+                  <img src="img/profiles/avatar.jpg"  alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" width="69" height="69" />
+              </div>
+              <div class="user-info">
+                  <div class="greeting">Welcome</div>
+                  <div class="username">John <span class="semi-bold">Smith</span></div>
+                  <div class="status">Status<a href="#"><div class="status-icon green"></div>Online</a></div>
+              </div>
+          </div>
+          <!-- END MINI-PROFILE -->
+
+          <!-- BEGIN SIDEBAR MENU -->
+          <ul>
+              <li class="start active "> <a href="index.html"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span></a></li>
+              <li class=""> <a href="javascript:;"> <i class="icon-custom-map"></i> <span class="title">Maps</span></a>
+              </li>
+              <li class=""> <a href="charts.html"> <i class="icon-custom-chart"></i> <span class="title">Charts</span> </a> </li>
+          </ul>
+          <div class="clearfix"></div>
+          <!-- END SIDEBAR MENU -->
+      </div>
+      <!-- END SIDEBAR -->
+      <!-- BEGIN PAGE CONTAINER-->
+      <div class="page-content">
+
+      <div ui-view></div>
+
+  </div>
+  <!-- END CONTAINER -->
+  </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="app.js"></script>
+  <script src="js/app.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
