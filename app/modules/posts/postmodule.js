@@ -1,4 +1,4 @@
-angular.module('saveCrop.posts', ['saveCrop.posts.controllers', 'wysiwyg.module', 'colorpicker.module']).config(['$stateProvider', '$locationProvider', function($stateProvider,$locationProvider){
+angular.module('saveCrop.posts', ['saveCrop.posts.controllers', 'wysiwyg.module', 'colorpicker.module', 'ui.bootstrap']).config(['$stateProvider', '$locationProvider', function($stateProvider,$locationProvider){
     $stateProvider.state('allPosts',{
         url:'/posts',
         templateUrl: 'modules/posts/views/posts.html',
