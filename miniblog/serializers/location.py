@@ -5,6 +5,7 @@ from ..models import Point, Location
 class PointSerializer(serializers.ModelSerializer):
     class Meta:
         model = Point
+        exclude = ('id', )
 
 
 class LocationSerializer(serializers.ModelSerializer):

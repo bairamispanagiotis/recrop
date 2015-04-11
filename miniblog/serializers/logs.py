@@ -6,6 +6,7 @@ from ..models import ProblemLog, HarvestLog
 class ProblemLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProblemLog
+        exclude = ('id', )
 
 
 class HarvestLogSerializer(serializers.ModelSerializer):
