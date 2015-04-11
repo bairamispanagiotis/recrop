@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import Problem, Disease, Pest
+from ..models import Problem
 
 
 class ProblemSerializer(serializers.ModelSerializer):
@@ -7,13 +7,3 @@ class ProblemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Problem
         exclude = ('id', )
-
-
-class DiseaseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Disease
-
-
-class PestSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pest
