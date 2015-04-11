@@ -1,4 +1,4 @@
-angular.module('saveCrop.posts.controllers',['']).controller
+angular.module('saveCrop.posts.controllers',[]).controller
 ('PostController',['$scope',
     function($scope){
 
