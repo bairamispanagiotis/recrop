@@ -7,6 +7,7 @@ angular.module('myApp', [
     'saveCrop.posts',
     'saveCrop.maps',
     'saveCrop.profile',
+    'saveCrop.statistics',
 ]).directive('jqdatepicker', function () {
     return {
         restrict: 'A',
