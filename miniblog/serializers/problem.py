@@ -3,10 +3,10 @@ from ..models import Problem, Disease, Pest
 
 
 class ProblemSerializer(serializers.ModelSerializer):
-    id = serializers.ReadOnlyField()
 
     class Meta:
         model = Problem
+        exclude = ('id', )
 
 
 class DiseaseSerializer(serializers.ModelSerializer):

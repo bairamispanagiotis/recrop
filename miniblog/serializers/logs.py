@@ -1,10 +1,11 @@
 from rest_framework import serializers
 
 from ..models import ProblemLog, HarvestLog
+from .problem import ProblemSerializer
 
 
 class ProblemLogSerializer(serializers.ModelSerializer):
-    problem_id = serializers.CharField(source='problem.id')
+    issue = ProblemSerializer(read_only=True, source='problem')
 
     class Meta:
         model = ProblemLog
