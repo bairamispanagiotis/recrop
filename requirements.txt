@@ -1,5 +1,5 @@
-djangotoolbox
 django
+djangotoolbox
 argparse
 defusedxml
 django-cors-headers
