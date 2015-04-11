@@ -1,6 +1,6 @@
 # Installation of Backend
 
-## Django setup
+## 1 Django setup
 
 Django MongoDB Engine depends on
 
@@ -68,3 +68,5 @@ You should use the latest Git revision.
 ```
 pip install git+https://github.com/django-nonrel/mongodb-engine
 ```
+
+## 2. MongoDB Setup
