@@ -75,3 +75,7 @@ pip install -r requirements.txt
 ```
 
 ## 2. MongoDB Setup
+
+## 3. RabbitMQ Setup
+
+## 4. Celery Setup
