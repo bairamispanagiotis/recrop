@@ -69,4 +69,9 @@ You should use the latest Git revision.
 pip install git+https://github.com/django-nonrel/mongodb-engine
 ```
 
+### 1.5. Install others requirements
+```
+pip install -r requirements.txt
+```
+
 ## 2. MongoDB Setup
