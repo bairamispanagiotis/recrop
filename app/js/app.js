@@ -8,7 +8,11 @@ angular.module('myApp', [
     'saveCrop.maps',
     'saveCrop.profile',
     'saveCrop.statistics',
-]).directive('jqdatepicker', function () {
+]).controller('menuActive', function($scope,$http,$location){
+	$scope.isActive = function(route) {
+        return route == $location.path();
+    }
+}).directive('jqdatepicker', function () {
     return {
         restrict: 'A',
         require: 'ngModel',
