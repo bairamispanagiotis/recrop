@@ -19,7 +19,7 @@
 		    	<br>
 		    		<label class="label label-default">Select Country</label><br><br>
 		    		<select class="form-control" ng-model="country" ng-change="changeCountry(country);">
-		    			<option value="{{country.id}}" ng-repeat="country in countries">{{country.properties.name}}</option>	    			
+		    			<option value="{{country.id}}" ng-repeat="(key,country) in countries">{{country.properties.name}}</option>	    			
 		    		</select>
 		    	</div>
 	   	 	</div>

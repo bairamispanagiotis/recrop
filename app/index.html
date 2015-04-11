@@ -58,13 +58,12 @@
                 </a> </li>
               </ul>
               <ul class="nav quick-section">
-                <li class="quicklinks"> <a href="#" class="" >
-                  <div class="iconset top-reload"></div>
-                </a> </li>
+                <li class="quicklinks"> 
+                  <a href="#" class="" >
+                    <div class="iconset top-reload"></div>
+                  </a> 
+                </li>
                 <li class="quicklinks"> <span class="h-seperate"></span></li>
-                <li class="quicklinks"> <a href="#" class="" >
-                  <div class="iconset top-tiles"></div>
-                </a> </li>
                 <li class="m-r-10 input-prepend inside search-form no-boarder">
                   <span class="add-on"> <span class="iconset top-search"></span></span>
                   <input name="" type="text"  class="no-boarder " placeholder="Search Dashboard" style="width:250px;">
@@ -102,10 +101,10 @@
 
           <!-- BEGIN SIDEBAR MENU -->
           <ul ng-controller="menuActive">
-            <li class="start"  ng-class="{active:isActive('/posts')}"> <a href="javascript:;" ui-sref="allPosts"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span></a></li>
-            <li ng-class="{active:isActive('/maps')}"> <a href="javascript:;"  ui-sref="maps"> <i class="icon-custom-map"></i> <span class="title">Maps</span></a>
+            <li class="start"  ng-class="{active:isActive('/posts')}"> <a href="javascript:;" ui-sref="allPosts"> <i class="fa fa-dashcube"></i> <span class="title">Dashboard</span></a></li>
+            <li ng-class="{active:isActive('/maps')}"> <a href="javascript:;"  ui-sref="maps"> <i class="fa fa-globe"></i> <span class="title">Maps</span></a>
             </li>
-            <li  ng-class="{active:isActive('/statistics')}"> <a href="javascript:;" ui-sref="statistics"> <i class="icon-custom-chart"></i> <span class="title">Charts</span> </a> </li>
+            <li  ng-class="{active:isActive('/statistics')}"> <a href="javascript:;" ui-sref="statistics"> <i class="fa fa-area-chart"></i> <span class="title">Charts</span> </a> </li>
           </ul>
           <div class="clearfix"></div>
           <!-- END SIDEBAR MENU -->
@@ -136,6 +135,7 @@
   <script src="bower_components/Chart.js/Chart.min.js"></script>
   <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
   <script src="js/app.js"></script>
+    <script src="js/core.js"></script>
 
   <!-- Modules -->
   <script src="modules/posts/postmodule.js"></script>
@@ -150,6 +150,5 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
-
 </body>
 </html>

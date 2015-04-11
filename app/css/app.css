@@ -78,5 +78,8 @@
 .profile .user-description-box .fa.fa-user-secret{
   padding-left: 3px;
 }
-
-  
+.profile .posts .post{
+  margin: 20px 0;
+  border: 0;
+  border-right: 1px solid #f2f4f6;
+}

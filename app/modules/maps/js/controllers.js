@@ -35,7 +35,7 @@ angular.module('saveCrop.maps.controllers',[]).controller
 
 	$scope.markers = [];
 	$scope.affectedAreas = [];
-	
+	$scope.countriesBorders = [];
 	$scope.countries = [];
 
 	
@@ -109,7 +109,7 @@ angular.module('saveCrop.maps.controllers',[]).controller
 
 
     $scope.changeCountry = function(cntr){	
-		$scope.countriesBorders = [];
+		
     	angular.forEach($scope.countries, function(country, key) {    
     		if (country.id == cntr) {
 		    	var triangleCoords = [];
@@ -121,7 +121,7 @@ angular.module('saveCrop.maps.controllers',[]).controller
 						        text: country.properties.name,
 						        position: new google.maps.LatLng(cord[1],cord[0]),
 						        map: $scope.map,
-						        fontSize: 25,
+						        fontSize: 15,
 						        align: 'right'
 						    });
 						    $scope.map.panTo(new google.maps.LatLng(cord[1],cord[0]));
@@ -148,7 +148,6 @@ angular.module('saveCrop.maps.controllers',[]).controller
 
 				$scope.countriesBorders.push($scope.countryBorder);
 			  	$scope.countriesBorders[$scope.countriesBorders.length-1].setMap($scope.map);
-
 			  	//Click Listener
 				google.maps.event.addListener($scope.map, 'click', function (clickEvent) {
 					console.log( clickEvent.latLng);
@@ -157,7 +156,57 @@ angular.module('saveCrop.maps.controllers',[]).controller
 				});
 			};
 	    });//End repeat
-	  	$scope.countriesBorders = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// country = parseInt(country);
+
+		// angular.forEach($scope.country, function(elem, key) {
+		// 	if(parseInt(country) == elem.id){
+				
+		// 		$scope.myLatlng = new google.maps.LatLng(elem.lat,elem.lng);
+		// 		//Add Marker
+		//     	$scope.marker = new google.maps.Marker({
+		// 		 map: $scope.map,
+		// 		 position: $scope.myLatlng,
+		// 		 draggable: false,
+		// 		 icon:'img/pin.png'
+		// 		});
+
+		// 		//Create Affected Area
+		// 		var circleOption = {
+		// 	      strokeColor: elem.color,
+		// 	      strokeOpacity: 0.8,
+		// 	      strokeWeight: 2,
+		// 	      fillColor: elem.color,
+		// 	      fillOpacity: 0.35,
+		// 	      map: $scope.map,
+		// 	      center: $scope.myLatlng,
+		// 	      radius: 9000 * 100
+		// 	    };
+		// 	    // Add the circle for this city to the map.
+		// 	    $scope.cityCircle = new google.maps.Circle(circleOption);
+		// 	    $scope.map.panTo($scope.myLatlng);
+
+		// 	    //Push Affected Area to Array
+		// 	    $scope.markers.push($scope.marker);
+		// 		$scope.affectedAreas.push($scope.cityCircle);
+				
+		// 	}
+		// });
     }
 
 
