@@ -1,0 +1,129 @@
+<div class="clearfix"></div>
+<div class="content profile">
+    <div id="container">
+    	<div class="col-md-12">
+                <div class=" tiles white col-md-12 no-padding">
+                    <div class="tiles green cover-pic-wrapper">                     
+                        <div class="overlayer bottom-right">
+                            <div class="overlayer-wrapper">
+                                    <div class="padding-10 hidden-xs">                                  
+                                        <button type="button" class="btn btn-primary btn-small"><i class="fa fa-check"></i>&nbsp;&nbsp;Following</button> <button type="button" class="btn btn-primary btn-small">Add</button>
+                                    </div>
+                                </div>
+                        </div>
+                    <img src="img/crop-background.png" alt="">
+                    </div>
+                    <div class="tiles-body">
+            
+                        <div class="row">
+                        
+                            <div class="col-md-11 user-description-box  col-sm-11">
+                              <div class="user-profile-pic">  
+                                    <img width="69" height="69" data-src-retina="img/profiles/avatar2x.jpg" data-src="img/profiles/avatar.jpg" src="img/profiles/avatar.jpg" alt="">
+                                </div>
+                                <h4 class="semi-bold no-margin">Admin</h4>
+                                <h6 class="no-margin">CEO of savecrop.org</h6>
+                                <br>
+                                <p><i class="fa fa-user-secret"></i><span ng-hide="user.editable">{{user.fullname}} <input type="text" value="{{user.fullname}}"  ng-model="user.fullname" ng-show="user.editable" name="fullname" /></span></p>
+                                <p><i class="fa fa-envelope-o"></i><span ng-model="user.email" >{{user.email}}</span></p>
+                                <p><i class="fa fa-phone"></i><span ng-model="user.telephone" >{{user.telephone}}</span></p>
+                                <p><i class="fa fa-calendar"></i><input id="datepickerr" jqdatepicker ng-model="date"></p>
+                                <p><button ng-click="alertuser();"></button></p>
+                            </div>
+                                      
+                        </div>
+                
+                  <div class="tiles-body">
+                  <div class="row">
+                    <div class="post col-md-12">
+                    <h2>Comments</h2>     
+                        <div class="user-profile-pic-wrapper">
+                            <div class="user-profile-pic-normal">
+                                    <img width="35" height="35" data-src-retina="img/profiles/c2x.jpg" data-src="img/profiles/c.jpg" src="img/profiles/c.jpg" alt="">
+                                </div>
+                        </div>
+                        <div class="info-wrapper"> 
+
+                            <div class="username">
+                                <span class="dark-text">John Drake</span> in <span class="dark-text">nervada hotspot</span> 
+                            </div>
+                            <div class="info">
+                                Great design concepts by <span class="dark-text">John Smith</span> and his crew! Totally owned the WCG!, Best of luck for your future endeavours, 
+                                Special thanks for <span class="dark-text">Jane smith</span> for her motivation ;) 
+                            </div>  
+                            <div class="more-details">
+                                <ul class="post-links">
+                                    <li><a href="#" class="muted">2 Minutes ago</a></li>
+                                    <li><a href="#" class="text-info">Collapse</a></li>
+                                    <li><a href="#" class="text-info" ><i class="fa fa-reply"></i> Reply</a></li>
+                                    <li><a href="#" class="text-warning"><i class="fa fa-star"></i> Favourited</a></li>
+                                    <li><a href="#"  class="muted">More</a></li>
+                                </ul>
+                            </div>
+                                <div class="clearfix"></div>
+                        
+                            <ul class="action-bar">
+                                <li><a href="#"  class="muted"><i class="fa fa-comment"></i> 1584</a> Comments</li>
+                                <li><a href="#" class="text-error" ><i class="fa fa-heart"></i> 47k</a> likes</li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <div class="post comments-section">
+                                    <div class="user-profile-pic-wrapper">
+                                        <div class="user-profile-pic-normal">
+                                                <img width="35" height="35" alt="" src="img/profiles/e.jpg" data-src="img/profiles/e.jpg" data-src-retina="img/profiles/e2x.jpg">
+                                            </div>
+                                    </div>
+                                    <div class="info-wrapper">                  
+                                        <div class="username">
+                                            <span class="dark-text">Thunderbolt</span> 
+                                        </div>
+                                        <div class="info">
+                                            Congrats, <span class="dark-text">John Smith</span>  & <span class="dark-text">Jane Smith</span>
+                                        </div>  
+                                        <div class="more-details">
+                                            <ul class="post-links">
+                                                <li><a href="#" class="muted">2 Minutes ago</a></li>
+                                                <li><a href="#" class="text-error" ><i class="fa fa-heart"></i> Like</a></li>
+                                                <li><a href="#"  class="muted">Details</a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>  
+                                    <div class="clearfix"></div>                        
+                            </div>
+                        <div class="post comments-section">
+                                    <div class="user-profile-pic-wrapper">
+                                        <div class="user-profile-pic-normal">
+                                                <img width="35" height="35" src="img/profiles/h.jpg" data-src="img/profiles/h.jpg" data-src-retina="img/profiles/h2x.jpg" alt="">
+                                            </div>
+                                    </div>
+                                    <div class="info-wrapper">                  
+                                        <div class="username">
+                                            <span class="dark-text">Thunderbolt</span> 
+                                        </div>
+                                        <div class="info">
+                                            Congrats, <span class="dark-text">John Smith</span>  & <span class="dark-text">Jane Smith</span>
+                                        </div>  
+                                        <div class="more-details">
+                                            <ul class="post-links">
+                                                <li><a href="#" class="muted">2 Minutes ago</a></li>
+                                                <li><a href="#" class="text-error" ><i class="fa fa-heart"></i> Like</a></li>
+                                                <li><a href="#"  class="muted">Details</a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>  
+                                    <div class="clearfix"></div>                        
+                            </div>                          
+                        </div>  
+                        <div class="clearfix"></div>    
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>

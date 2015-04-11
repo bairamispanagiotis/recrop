@@ -47,3 +47,13 @@
   z-index: 9999;
   width: 200px;
 }
+
+
+/* Profile */
+.profile .cover-pic-wrapper img{
+  width: 100%;
+}
+
+.profile .user-description-box span{
+  padding: 10px 10px 0px 0;
+}

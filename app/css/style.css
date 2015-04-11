@@ -6850,7 +6850,7 @@ table.fc-border-separate{
 
 .user-profile-pic{
 	width:100%;
-	text-align:right;
+	text-align:left;
 	margin-top: -40px;
 	position:relative;
 	z-index:3;
