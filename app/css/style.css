@@ -6852,7 +6852,7 @@ table.fc-border-separate{
 	width:100%;
 	text-align:left;
 	margin-top: -40px;
-	position:relative;
+/*	position:relative;*/
 	z-index:3;
 }
 .user-profile-pic img{
@@ -6891,8 +6891,9 @@ table.fc-border-separate{
 	font-size: 12px;
 }
 .user-description-box p i{
-    width: 25px;
-	font-size: 14px;
+    width: 35px;
+	font-size: 25px;
+	float: left;
 }
 .user-description-box p:last-child{
 	margin: 0px;

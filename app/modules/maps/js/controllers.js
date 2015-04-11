@@ -1,7 +1,7 @@
 angular.module('saveCrop.maps.controllers',[]).controller
-('MapsController',['$scope',
-    function($scope){
-
+('MapsController',['$scope','$http',
+    function($scope,$http){
+  
     $scope.diseases = {
 			"1":{
 				id:1,
@@ -30,31 +30,42 @@ angular.module('saveCrop.maps.controllers',[]).controller
 				lat:29.6630859375,
 				lng:15.496032414238634,
 				color:"#cecc36",
-			},
-
-			
+			}			
 		};
 
 	$scope.markers = [];
 	$scope.affectedAreas = [];
-
-    //Init Google map options
-    $scope.map = new google.maps.Map(document.getElementById('map-canvas'), {
-	 	center: { lat: 22.7142333984375, lng: 29.630771207229},
-	    mapTypeId: google.maps.MapTypeId.ROADMAP,
-	    zoom: 5,
-	});
-    
-
-
-
-
-    //Click Listener
-	google.maps.event.addListener($scope.map, 'click', function (clickEvent) {
-		console.log( clickEvent.latLng);
-    
 	
-	});
+	$scope.countries = [];
+
+	
+   
+    
+
+ $http.get('modules/maps/countries.geo.json')
+       .then(function(res){
+
+      	
+        $scope.countries = res.data.features; 
+       // console.log($scope.countries);
+       	//Init Google map options
+	    $scope.map = new google.maps.Map(document.getElementById('map-canvas'), {
+		 	center: { lat:-31.503629305773018, lng: -62.05078125 },
+		    mapTypeId: google.maps.MapTypeId.ROADMAP,
+		    zoom: 4,
+		});
+	       
+
+// console.log($scope.countries); 
+// 	    console.log($scope.countriesBorders);
+	   
+
+
+                      
+        });
+
+
+    
 
 
 
@@ -96,13 +107,64 @@ angular.module('saveCrop.maps.controllers',[]).controller
 		});
     }
 
-// D: 22.7142333984375k: 29.630771207229
+
+    $scope.changeCountry = function(cntr){	
+		$scope.countriesBorders = [];
+    	angular.forEach($scope.countries, function(country, key) {    
+    		if (country.id == cntr) {
+		    	var triangleCoords = [];
+		    	  angular.forEach(country.geometry.coordinates, function(cords, key) {
+		    	  	  angular.forEach(cords, function(cord, key) {
+		    	  	  	if(key == 0){
+
+			    	  	  	var mapLabel = new MapLabel({
+						        text: country.properties.name,
+						        position: new google.maps.LatLng(cord[1],cord[0]),
+						        map: $scope.map,
+						        fontSize: 25,
+						        align: 'right'
+						    });
+						    $scope.map.panTo(new google.maps.LatLng(cord[1],cord[0]));
+			    	  	}
+
+		    	  	  	//console.log(cord);
+		    	  		var cor = new google.maps.LatLng(parseFloat(cord[1]), parseFloat(cord[0]));
+		    	  		triangleCoords.push(cor);
+		    	  	  });
+		    	  	
+
+		    	  });
+		    	
+		    	//console.log(triangleCoords);
+		    	//Construct Country Border.
+				$scope.countryBorder = new google.maps.Polygon({
+					paths: triangleCoords,
+					strokeColor: '#FF00'+key,
+					strokeOpacity: 0.8,
+					strokeWeight: 2,
+					fillColor: '#FF00'+key,
+					fillOpacity: 0.35
+				});
+
+				$scope.countriesBorders.push($scope.countryBorder);
+			  	$scope.countriesBorders[$scope.countriesBorders.length-1].setMap($scope.map);
+
+			  	//Click Listener
+				google.maps.event.addListener($scope.map, 'click', function (clickEvent) {
+					console.log( clickEvent.latLng);
+			    
+				
+				});
+			};
+	    });//End repeat
+	  	$scope.countriesBorders = [];
+    }
 
 
 
 
 
-    }]).controller('MapsDetailsController',['$stateParams','$state', '$scope',function($stateParams,$state,$scope){
+}]).controller('MapsDetailsController',['$stateParams','$state', '$scope',function($stateParams,$state,$scope){
 
 	
 

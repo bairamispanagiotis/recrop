@@ -1,14 +1,52 @@
 <div class="clearfix"></div>
 <div class="content">
     <div id="container">
-    	<div class="mapControlls">
-    		<select class="form-control"  ng-model="disease" ng-change="changeDisease(disease);">
-    			<option value="1">Diseases of Alfalfa</option>
-    			<option value="2">Diseases of Almond</option>
-    			<option value="3">Diseases of Apple</option>
-    			<option value="4">Diseases of Cacao</option>
-    		</select>
+    	<div class="row">
+    		<div class="col-md-4">
+		    	<div class="mapControlls">
+		    	<br>
+		    		<label class="label label-default">Select Disease</label><br><br>
+		    		<select class="form-control"  ng-model="disease" ng-change="changeDisease(disease);">
+		    			<option value="1">Diseases of Alfalfa</option>
+		    			<option value="2">Diseases of Almond</option>
+		    			<option value="3">Diseases of Apple</option>
+		    			<option value="4">Diseases of Cacao</option>
+		    		</select>
+		    	</div>
+	   	 	</div>
+	   	 	<div class="col-md-4">
+		    	<div class="mapControlls">
+		    	<br>
+		    		<label class="label label-default">Select Country</label><br><br>
+		    		<select class="form-control" ng-model="country" ng-change="changeCountry(country);">
+		    			<option value="{{country.id}}" ng-repeat="country in countries">{{country.properties.name}}</option>	    			
+		    		</select>
+		    	</div>
+	   	 	</div>
+	   	 	<div class="col-md-4">
+		    	<div class="mapControlls">
+		    	<br>
+		    		<label class="label label-default">Select Disease</label><br><br>
+		    		<select class="form-control"  ng-model="disease" ng-change="changeDisease(disease);">
+		    			<option value="{{country.id}}" ng-repeat="(key, country) in countries">{{country.properties.name}}</option>
+		    			
+		    		</select>
+		    	</div>
+	   	 	</div>
+
     	</div>
-     		 <div id="map-canvas"></div>
+    	<hr>
+	    	<div class="row mapArea">
+	    		<div class="col-md-9">
+	     			 <div id="map-canvas"></div>
+	     		 </div>	    
+	    		<div class="col-md-3">
+	     			 <div>
+	     			 	<h2>Stats</h2>
+	     			 	<ul>
+	     			 		<li ng-repeat="(key, country) in countries">{{country.properties.name}}</li>
+	     			 	</ul>
+	     			 </div>
+	     		 </div>	    
         </div>
     </div>
