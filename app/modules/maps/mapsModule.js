@@ -1,14 +1,7 @@
-angular.module('saveCrop.maps', ['uiGmapgoogle-maps']).config(
-    ['uiGmapGoogleMapApiProvider', '$stateProvider', '$locationProvider', function(GoogleMapApiProviders, $stateProvider, $locationProvider) {
-        GoogleMapApiProvider.configure({
-            china: true
-        });
-
-        $stateProvider.state('admin',{
-            url:'/maps',
-            abstract:true,
-            controller:'',
-            templateUrl:''
-        })
-    }]
-);
+angular.module('saveCrop.maps', ['saveCrop.maps.controllers']).config(['$stateProvider', '$locationProvider', function($stateProvider,$locationProvider){
+    $stateProvider.state('maps',{
+        url:'/maps',
+        templateUrl: 'modules/maps/views/maps.html',
+        controller: 'MapsController'
+    });
+}]);

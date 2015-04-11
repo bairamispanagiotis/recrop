@@ -4,5 +4,6 @@ angular.module('saveCrop.posts.controllers',[]).controller
 
 
     }]).controller('PostDetailsController',['$stateParams','$state', '$scope',function($stateParams,$state,$scope){
+    	
 
 }]);

@@ -1,6 +1,14 @@
 <div class="clearfix"></div>
 <div class="content">
     <div id="container">
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    	<div class="mapControlls">
+    		<select class="form-control"  ng-model="disease" ng-change="changeDisease(disease);">
+    			<option value="1">Diseases of Alfalfa</option>
+    			<option value="2">Diseases of Almond</option>
+    			<option value="3">Diseases of Apple</option>
+    			<option value="4">Diseases of Cacao</option>
+    		</select>
+    	</div>
+     		 <div id="map-canvas"></div>
         </div>
     </div>
