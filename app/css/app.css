@@ -1,0 +1,82 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+/* Maps View */
+.mapArea .col-md-9{
+    margin: 20px 0;
+  border: 0;
+  border-right: 1px solid #FEFEFE;
+}
+
+#map-canvas{
+  width: 100%;
+  height: 1000px;
+}
+
+/*.mapControlls select{
+  position: absolute;
+  margin-top: -20px;
+  right: 60%;
+  z-index: 9999;
+  width: 200px;
+}*/
+
+
+/* Profile */
+.profile .cover-pic-wrapper img{
+  width: 100%;
+}
+
+.profile .user-description-box span{
+  padding: 10px 10px 0px 0;
+    font-size: 15px;
+}
+
+.profile .user-description-box input{
+  width: 200px;
+  position: relative;
+  top: -7px;
+}
+.profile .user-description-box .editProfile{
+  display: block;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.profile .user-description-box .editProfile i{
+ font-size: 25px;
+  cursor: pointer;
+}
+.profile .user-description-box .fa.fa-user-secret{
+  padding-left: 3px;
+}
+
+  
