@@ -4,6 +4,8 @@ from ..models import ProblemLog, HarvestLog
 
 
 class ProblemLogSerializer(serializers.ModelSerializer):
+    problem_id = serializers.CharField(source='problem.id')
+
     class Meta:
         model = ProblemLog
         exclude = ('id', )
