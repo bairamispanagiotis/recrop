@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom-icons.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
     <!-- END CSS TEMPLATE -->
 </head>
 <body>
@@ -99,7 +100,7 @@
               <li class="start active "> <a href="index.html"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span></a></li>
               <li class=""> <a href="javascript:;"> <i class="icon-custom-map"></i> <span class="title">Maps</span></a>
               </li>
-              <li class=""> <a href="charts.html"> <i class="icon-custom-chart"></i> <span class="title">Charts</span> </a> </li>
+              <li class=""> <a href="javascript:;" ui-sref="statistics"> <i class="icon-custom-chart"></i> <span class="title">Charts</span> </a> </li>
           </ul>
           <div class="clearfix"></div>
           <!-- END SIDEBAR MENU -->
@@ -121,9 +122,13 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
   <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+  <script src="bower_components/Chart.js/Chart.min.js"></script>
+  <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
   <script src="js/app.js"></script>
   <script src="modules/posts/postmodule.js"></script>
   <script src="modules/posts/js/controllers.js"></script>
+  <script src="modules/statistics/statisticModule.js"></script>
+  <script src="modules/statistics/js/controllers.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

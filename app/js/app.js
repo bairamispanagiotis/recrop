@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'myApp.version',
     'ui.router',
-    'saveCrop.posts'
+    'saveCrop.posts',
+    'saveCrop.statistics'
 ]).run(['$state', function($state){
     $state.go('allPosts');
 }]);
