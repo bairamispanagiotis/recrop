@@ -1,3 +1,8 @@
+<?php include 'header.php'; ?>
+<script type="text/javascript">  
+  var userid = "<?php echo $_SESSION['userid']; ?>";
+</script>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -46,7 +51,7 @@
               <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>
             </ul>
             <!-- BEGIN LOGO -->
-            <a href="index.html"><img src="img/logo.png" class="logo" alt=""  data-src="img/logo.png" data-src-retina="assets/img/logo2x.png" width="106" height="21"/></a>
+            <a href="index.php" class="logo">SaveCrop</a>
             <!-- END LOGO -->
           </div>
           <!-- END RESPONSIVE MENU TOGGLER -->
@@ -64,10 +69,17 @@
                     <div class="iconset top-reload"></div>
                   </a> 
                 </li>
+               
+                
                 <li class="quicklinks"> <span class="h-seperate"></span></li>
                 <li class="m-r-10 input-prepend inside search-form no-boarder">
                   <span class="add-on"> <span class="iconset top-search"></span></span>
                   <input name="" type="text"  class="no-boarder " placeholder="Search Dashboard" style="width:250px;">
+                </li>
+                 <li class="quicklinks pull-right"> 
+                  <a href="logout.php" class="" >
+                   <i class="fa fa-sign-out"></i>
+                  </a> 
                 </li>
               </ul>
             </div>
@@ -95,7 +107,7 @@
               </div>
               <div class="user-info">
                   <div class="greeting">Welcome</div>
-                  <div class="username">John <span class="semi-bold">Smith</span></div>
+                  <div class="username"><?php echo $_SESSION['username']; ?> <span class="semi-bold"><?php echo $_SESSION['userid']; ?></span></div>
                   <div class="status">Role<a href="#"><div class="status-icon green"></div>Admin</a></div>
               </div>
 

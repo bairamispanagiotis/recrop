@@ -1,28 +1,33 @@
     <div class="clearfix"></div>
     <div class="content">
-        <div id="container">
-            <div class="row row-centered">
-                <div class="col-xs-2 col-centered"; style="width: inherit"><img style="float: right"; src="img/profiles/avatar.jpg">
+        <button class="btn btn-default pull-right" ui-sref="postNew">Add Post</button>
+        <div id="container"> 
+          
+            <div class="row row-centered post" ng-repeat="(key, post) in posts">
+           
+                <div class="col-xs-2 col-centered"; style="width: inherit"><img style="float: right;  margin-bottom: 10px;"; src="img/profiles/avatar.jpg">
+                <br><br><br><button class="btn btn-default" style="width:100%;height:30px;  padding: 0;" ng-show="post.userid == post.currentUserId" ng-href="#/posts/{{post.id}}/edit" href="">Edit</button>
                 </div>
-                <div class="col-xs-6 col-centered">
+                <div class="col-xs-6 col-centered" >
                     <div class="post-preview">
-                        <a href="post.html">
-
+                        <a href="post.html?id={{post.id}}">
                             <h2 class="post-title">
-                                Alternaria leaf spot
+                               Pest Disease:  {{post.pest_disease}}
                             </h2>
                             <h3 class="post-subtitle">
-                                Problems look mighty small from 150 miles up
+                               Disease Type: {{post.disease_type}}
                             </h3>
                         </a>
-                        <p class="post-meta">Posted by John Smith on September 24, 2014 - disease started on September 24, 2014</p>
-
+                        <p class="post-meta">Posted by John Smith on {{post.date}}</p>
+                        <p class="post-meta"></p>
                     </div>
                 </div>
 
-                <div class="col-xs-3 col-centered"><img style="float: left; width: 154px; height: 124px;" src="img/test.jpg">
+                <div class="col-xs-3 col-centered"><img style="float: left; width: 100%;" src="{{post.image}}">
                 </div>
+                  
             </div>
+<hr>
         </div>
     </div>
     

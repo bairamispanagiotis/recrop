@@ -1,5 +1,16 @@
 /* app css stylesheet */
-
+label{
+  font-weight: bold;
+}
+.logo{
+  font-size: 45px;
+  color: #fefefe;
+  text-align: center;
+  display: block;
+  text-shadow: 2px 2px 5px rgba(16, 255, 246, 0.7) !important;
+    padding: 0;
+  margin: 0;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -82,4 +93,11 @@
   margin: 20px 0;
   border: 0;
   border-right: 1px solid #f2f4f6;
+}
+
+/* Posts */
+
+#affected-map{
+  width: 100%;
+  height: 400px;
 }
