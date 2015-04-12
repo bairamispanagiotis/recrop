@@ -21,6 +21,7 @@ Users can: <br>
 •	Sms alert about regions being in high risk of climatic events that can affect the crops.<br>
 •	Analysis of the entered by the user data for the scope of knowledge, anticipation, research and results.<br>
 ![Day mode image](http://savecrop.org/app/img/maps.png)
+![Day mode image](http://savecrop.org/app/img/statistics.png)
 #Next steps
 •	Update database with more information, which will be useful for growers.<br>
 •	Develop mobile app for ios and android, which gives the capability to inform the app immediately through images taken by camera.<br>
@@ -28,5 +29,3 @@ Users can: <br>
 •	Creation of API, so other applications can make use of those data.
 
 #Visit pre-beta <a href="http://savecrop.org">project</a>
-user: admin
-pass: admin
