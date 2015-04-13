@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'permission_backend_nonrel',
     'corsheaders',
     'miniblog',
+    'tasks',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -143,7 +144,7 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
 }
 
-BROKER_URL = 'amqp://celery:celery@localhost:5672//task'
+BROKER_URL = 'amqp://celery:celery@localhost:5672//'
 
 CELERY_RESULT_BACKEND = 'mongodb://localhost:27017'
 CELERY_MONGODB_BACKEND_SETTINGS = {
