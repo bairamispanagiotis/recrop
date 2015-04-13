@@ -142,3 +142,17 @@ JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
 }
+
+BROKER_URL = 'amqp://celery:celery@localhost:5672//task'
+
+CELERY_RESULT_BACKEND = 'mongodb://localhost:27017'
+CELERY_MONGODB_BACKEND_SETTINGS = {
+    'database': 'celery',
+    'taskmeta_collection': 'tasks',
+}
+
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TIMEZONE = 'Europe/Athens'
+CELERY_ENABLE_UTC = True

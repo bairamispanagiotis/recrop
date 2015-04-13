@@ -6,3 +6,4 @@ djangorestframework
 djangorestframework-jwt
 djangorestframework-xml
 wsgiref==0.1.2
+celery
