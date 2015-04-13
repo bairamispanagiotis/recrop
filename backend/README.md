@@ -79,3 +79,28 @@ pip install -r requirements.txt
 ## 3. RabbitMQ Setup
 
 ## 4. Celery Setup
+
+### 4.1. Configuration
+
+#### `recrop/settings.py`
+
+```
+BROKER_URL = 'amqp://celery:celery@localhost:5672//'
+
+CELERY_RESULT_BACKEND = 'mongodb://localhost:27017'
+CELERY_MONGODB_BACKEND_SETTINGS = {
+    'database': 'celery',
+    'taskmeta_collection': 'tasks',
+}
+
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TIMEZONE = 'Europe/Athens'
+CELERY_ENABLE_UTC = True
+```
+
+### 4.2. Starting the worker
+```
+celery --app=recrop.celery worker --loglevel=INFO
+```
